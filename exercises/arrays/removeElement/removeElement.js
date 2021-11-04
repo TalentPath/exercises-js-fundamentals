@@ -15,6 +15,14 @@
  */
 function removeElement(array, element) {
   // This is your job. :)
+  let resultArray = []
+  for (let i =0; i < array.length; i++) {
+    if (array[i] != element) {
+      resultArray.push(array[i])
+    }
+  }
+
+  console.log(resultArray)
 }
 
 if (require.main === module) {
@@ -25,3 +33,5 @@ if (require.main === module) {
 }
 
 module.exports = removeElement;
+
+removeElement(['Jesse', undefined, 'Farmer'], undefined);

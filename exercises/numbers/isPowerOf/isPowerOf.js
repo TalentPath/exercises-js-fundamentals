@@ -24,6 +24,9 @@
 function isPowerOf(num, base) {
   // Your code here
   // Remember, you can assume that num is a positive integer.
+
+  let result = Math.log10(num) / Math.log10(base)
+  return Number.isInteger(result)
 }
 
 if (require.main === module) {

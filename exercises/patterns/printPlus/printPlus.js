@@ -38,7 +38,22 @@ function printPlus(height) {
   }
 
   for (let i = 0; i < height; i++) {
-    // This is your job. :)
+    let char = "#"
+    let result = ""
+    let middle = (Math.floor(height / 2))
+  
+
+  for (let i = 0; i < height; i++) {
+    for (let x = 0; x < height; x++) {
+      if (i === middle || x === middle ) {
+        result += char
+      }
+        else { result += " "}
+      }
+
+      result += "\n"
+    }
+    console.log(result)
 
     helpers.printNewLine();
   }

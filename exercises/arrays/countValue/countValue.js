@@ -15,7 +15,13 @@
  * @returns {number} The number of times the value appears in the array
  */
 function countValue(array, value) {
-  // This is your job. :)
+  let counter = 0;
+  for (let i = 0; i < array.length; i++) {
+    if(array[i] === value) {
+      counter++
+    }
+  }
+  return counter
 }
 
 if (require.main === module) {
@@ -23,6 +29,13 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(countValue([1, 2, 3, 4, 5], 2) === 1)
+ console.log(countValue([1, 2, 3, 4, 5], 17) === 0)
+ console.log(countValue([1, 2, 1, 2, 3, 4, 1, 2, 1], 1) === 4)
+ console.log(countValue([10, 10, 10, -10], 10) ===  3)
+ console.log(countValue(['hello', 'bananas', 'hello'], 'hello') ===  2)
+ console.log(countValue(['hello', 'bananas', 'hello'], 'giraffe') ===  0)
 }
 
 module.exports = countValue;

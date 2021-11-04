@@ -20,7 +20,21 @@ function daysInMonthByNumber(monthNum) {
     throw new Error(`Expected a month number from 1-12, received: ${monthNum}`);
   }
 
-  // This is your job. :)
+  let daysInMonth = {
+    1:31,
+    2:28,
+    3:31,
+    4:30,
+    5:31,
+    6:30,
+    7:31,
+    8:31,
+    9:30,
+    10:31,
+    11:30,
+    12:31
+  }
+  return daysInMonth[monthNum]
 }
 
 if (require.main === module) {
@@ -29,18 +43,18 @@ if (require.main === module) {
   // The _____ is meant to be "fill in the blank"
   // Loop up how many days are in each month.
 
-  console.log(daysInMonthByNumber(1) === _____);
-  console.log(daysInMonthByNumber(2) === _____);
-  console.log(daysInMonthByNumber(3) === _____);
-  console.log(daysInMonthByNumber(4) === _____);
-  console.log(daysInMonthByNumber(5) === _____);
-  console.log(daysInMonthByNumber(6) === _____);
-  console.log(daysInMonthByNumber(7) === _____);
-  console.log(daysInMonthByNumber(8) === _____);
-  console.log(daysInMonthByNumber(9) === _____);
-  console.log(daysInMonthByNumber(10) === _____);
-  console.log(daysInMonthByNumber(11) === _____);
-  console.log(daysInMonthByNumber(12) === _____);
+  console.log(daysInMonthByNumber(1) === 31);
+  console.log(daysInMonthByNumber(2) === 28);
+  console.log(daysInMonthByNumber(3) === 31);
+  console.log(daysInMonthByNumber(4) === 30);
+  console.log(daysInMonthByNumber(5) === 31);
+  console.log(daysInMonthByNumber(6) === 30);
+  console.log(daysInMonthByNumber(7) === 31);
+  console.log(daysInMonthByNumber(8) === 31);
+  console.log(daysInMonthByNumber(9) === 30);
+  console.log(daysInMonthByNumber(10) === 31);
+  console.log(daysInMonthByNumber(11) === 30);
+  console.log(daysInMonthByNumber(12) === 31);
 }
 
 module.exports = daysInMonthByNumber;
