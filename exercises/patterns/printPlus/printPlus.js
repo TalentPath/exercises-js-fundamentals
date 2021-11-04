@@ -37,11 +37,29 @@ function printPlus(height) {
     throw new Error(`height must be an odd integer, received: ${height}`);
   }
 
-  for (let i = 0; i < height; i++) {
-    // This is your job. :)
+  let char = "#";
+  let result = "";
+  let middle = Math.floor(height / 2);
+  console.log("Middle: ", middle);
 
-    helpers.printNewLine();
+  for (let i = 0; i < height; i++) {
+    
+    for(let x = 0; x < height; x++) {
+
+      if(i == middle || x == middle) {
+        result += char;
+      } 
+      else {
+        result += " ";
+      }
+
+    }
+
+    result += "\n";
+
   }
+
+  console.log(result);
 }
 
 /**

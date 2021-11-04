@@ -20,8 +20,8 @@
  * @returns {boolean} True if the number is a power of 2, false otherwise.
  */
 function isPowerOfTwo(num) {
-  // Your code here
-  // Remember, you can assume that num is a positive integer.
+  let result = Math.log10(num) / Math.log10(2);
+  return Number.isInteger(result);
 }
 
 if (require.main === module) {
