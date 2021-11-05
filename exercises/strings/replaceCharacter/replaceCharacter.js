@@ -14,14 +14,6 @@
 
 function replaceCharacter(string, target, replaceWith) {
   // This is your job. :)
-  let listOfCharacters = string.toLowerCase().split('');
-  for(let i = 0; i < string.length; i++)
-  {
-    if(listOfCharacters[i] == target)
-      listOfCharacters[i] = replaceWith;
-  }
-  string = listOfCharacters.join('');
-  return string;
 }
 
 if (require.main === module) {
@@ -29,9 +21,6 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
-  let word = 'mississippi';
-  console.log(`We shall now replace all of the letter s in the word ${word} with the number 5: ` +
-  replaceCharacter(word, 's', '5'))
 }
 
 module.exports = replaceCharacter;

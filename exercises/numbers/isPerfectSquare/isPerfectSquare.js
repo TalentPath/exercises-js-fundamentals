@@ -26,18 +26,12 @@ function isPerfectSquare(num) {
   }
 
   // The rest is your job. :)
-  if(Math.sqrt(num) % 1 == 0)
-    return true;
-  else 
-    return false;
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for isPerfectSquare:');
 
   // Your sanity checks go here
-  console.log("checking to see if 36 is a perfect square: " + isPerfectSquare(36))
-  console.log("also checking 44: " + isPerfectSquare(44));
 }
 
 module.exports = isPerfectSquare;

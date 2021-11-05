@@ -9,16 +9,6 @@
 
 function shortestWord(string) {
   // This is your job. :)
-  let listOfStrings = string.split(' ');
-  console.log(listOfStrings);
-  let shortest = listOfStrings[0];
-  for(word of listOfStrings)
-  {
-    if(word.length < shortest.length)
-      shortest = word;
-  }
-
-  return shortest;
 }
 
 if (require.main === module) {
@@ -26,8 +16,6 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
-  let phrase = "Everybody wants to rule the world";
-  //console.log(`Out of the phrase '${phrase}', the shortest word is '` + shortestWord(phrase) + `'`);
 }
 
 module.exports = shortestWord;

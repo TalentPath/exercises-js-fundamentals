@@ -25,7 +25,53 @@
  *  whether the first player won, lost, or drew the match.
  */
 function rockPaperScissorsWinner(array) {
-  // This is your job. :)
+  //This is your job. :)
+  //scissors = 0 , paper = 1 , rock =2 
+  switch(true){
+
+    //draw, scissors,scissors 
+    case (array[0] == 0 && array[1] == 0) :
+    return  "draw "; 
+
+    // Scissors beats rock
+    case (array[0] == 0 && array[1] == 1) :
+    return  "Scissors beats rock  "; 
+   
+    // rock beats scissors 
+    case (array[0] == 0 && array[1] == 2) :
+    return  "Rock beats scissors "; 
+
+    // paper lose scissors 
+    case (array[0] == 1 && array[1] == 0) :
+      return  "paper lose scissors "; 
+    
+      // Draw
+    case (array[0] == 1 && array[1] == 1) :
+      return  " Draw "; 
+    
+      // paper beats rock
+    case (array[0] == 1 && array[1] == 2) :
+      return  "paper beats rock"; 
+    //rock beats scissors 
+    case (array[0] == 2 && array[1] == 0) :
+        return  "rock beats scissors ";
+        
+    //rock beats scissors   
+    case (array[0] == 2 && array[1] == 0) :
+          return  "rock beats scissors ";  
+    // rock loses to paper 
+    case (array[0] == 2 && array[1] == 1) :
+      return "rock loses to paper "
+    
+    case (array[0] == 2 && array[1] == 2):
+      return "draw " 
+
+  
+}
+
+
+  
+// console.log(array);
 }
 
 if (require.main === module) {
@@ -33,6 +79,8 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(rockPaperScissorsWinner([1,2])); 
 }
 
 module.exports = rockPaperScissorsWinner;
