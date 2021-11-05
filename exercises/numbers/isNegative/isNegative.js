@@ -7,8 +7,12 @@
 function isNegative(num) {
   // The _____ is meant to be "fill in the blank"
   // Look at isZero and compare; what makes sense here?
-
-  return _____;
+  if(num < 0){
+    return true
+  }
+  else 
+  return false;
+ 
 }
 
 if (require.main === module) {

@@ -18,6 +18,17 @@
 
 function toTitleCase(string) {
   // This is your job. :)
+
+  string = string.toLowerCase().split(' '); 
+
+  for(let i = 0 ; i< string.length; i++) {
+    string[i] = string[i].charAt(0).toUpperCase()+ string[i].slice(1); 
+  
+  }
+  // print out the title 
+   return string.join(' ');
+  
+
 }
 
 if (require.main === module) {
@@ -25,6 +36,7 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+  console.log(toTitleCase("Avatar the last airbender"));
 }
 
 module.exports = toTitleCase;

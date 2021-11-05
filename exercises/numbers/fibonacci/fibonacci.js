@@ -21,8 +21,26 @@
  * @param {number} n - A non-negative integer
  * @returns {number} The fibonacci of num
  */
+
+let series1 = 0 ; 
+let series2 = 1;
+let nextTerm = 0;
+
 function fibonacci(n) {
   // This is your job. :)
+  console.log("Fibonacci Serries of: " + n)
+  for(let i = 0; i < n; i ++ ){
+
+    console.log(series1); 
+
+    nextTerm = series1 + series2; 
+    
+    series1 = series2; 
+    series2 = nextTerm; 
+
+  }
+console.log(series1);
+
 }
 
 if (require.main === module) {
@@ -30,6 +48,8 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+console.log(fibonacci(10));
+
 }
 
 module.exports = fibonacci;
