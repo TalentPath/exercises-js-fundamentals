@@ -15,6 +15,8 @@
 
 function toSnakeCase(string) {
   // This is your job. :)
+  let listOfWords = string.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`'~()]/g,"").split(' ').join('_');
+  return listOfWords
 }
 
 if (require.main === module) {
@@ -22,6 +24,9 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+  let phrase = "Hello world, lEt'S mESs wIth SOMe UppER WordS";
+  console.log(`Now checking to see if the phrase ${phrase} turns into snake case: ` +
+  toSnakeCase(phrase));
 }
 
 module.exports = toSnakeCase;
