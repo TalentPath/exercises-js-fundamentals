@@ -12,7 +12,16 @@
  */
 
 function replaceCharacters(string, replacementDict) {
-  // This is your job. :)
+  let result = ""
+  for (i = 0; i < string.length; i++) {
+    if (replacementDict[string[i]]) {
+      result += replacementDict[string[i]]
+    } 
+    else {
+      result += string[i]
+    }
+  }
+  return result
 }
 
 if (require.main === module) {
@@ -20,6 +29,8 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(replaceCharacters('hello', { 'h': 'y', 'l': '8' }))
 }
 
 module.exports = replaceCharacters;

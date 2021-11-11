@@ -35,8 +35,22 @@ function printSolidSquare(height) {
   for (let i = 0; i < height; i++) {
     let numChars = height;
 
-    helpers.printCountTimes('#', numChars);
-    helpers.printNewLine();
+    let char = "#"
+    let result = ""
+    
+  
+    for (let i = 0; i < height; i++) {
+      for (let x = 0; x < height; x++) {
+        
+        if (i === 0 || i === height - 1 || x === 0 || x === height - 1) {
+          result += char
+        }
+          else { result += char}
+        }
+  
+        result += "\n"
+      }
+      console.log(result)
   }
 }
 

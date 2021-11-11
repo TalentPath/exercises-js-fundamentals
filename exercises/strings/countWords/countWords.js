@@ -8,7 +8,8 @@
  */
 
 function countWords(string) {
-  // This is your job. :)
+  let str = string.split(" ")
+  return str.length
 }
 
 if (require.main === module) {
@@ -16,6 +17,9 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(countWords("Hello how are you"))
+  console.log(countWords("How else will you be sure your code does what you think it does?"))
 }
 
 module.exports = countWords;

@@ -13,7 +13,16 @@
  */
 
 function replaceCharacter(string, target, replaceWith) {
-  // This is your job. :)
+  let result = ""
+  for (i = 0; i < string.length; i++) {
+    if (string[i] === target) {
+      result +=replaceWith
+    } 
+    else {
+      result += string[i]
+    }
+  }
+  return result
 }
 
 if (require.main === module) {
@@ -21,6 +30,8 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(replaceCharacter('hello', 'l', '8'))
 }
 
 module.exports = replaceCharacter;
