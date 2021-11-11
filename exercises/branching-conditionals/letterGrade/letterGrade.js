@@ -14,7 +14,19 @@
  * @return {string} The corresponding letter grade for the given percentage grade
  */
 function letterGrade(percentGrade) {
-  // This is your job. :)
+  if(percentGrade >= 97) return 'A+';
+  else if(percentGrade  >= 93) return 'A';
+  else if(percentGrade >= 90) return 'A-';
+  else if(percentGrade >= 87) return 'B+';
+  else if(percentGrade >= 83) return 'B';
+  else if(percentGrade  >= 80) return 'B-';
+  else if(percentGrade >= 77) return 'C+';
+  else if(percentGrade  >= 73) return 'C';
+  else if(percentGrade  >= 70) return 'C-';
+  else if(percentGrade >= 67) return 'D+';
+  else if(percentGrade  >= 63) return 'D';
+  else if(percentGrade  >= 60) return 'D-';
+  else return 'F';
 }
 
 if (require.main === module) {
@@ -22,6 +34,12 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(letterGrade(100));
+  console.log(letterGrade(80));
+  console.log(letterGrade(72));
+  console.log(letterGrade(50));
+  console.log(letterGrade(91));
 }
 
 module.exports = letterGrade;

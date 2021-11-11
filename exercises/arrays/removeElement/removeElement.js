@@ -14,8 +14,15 @@
  *   element removed.
  */
 function removeElement(array, element) {
-  // This is your job. :)
+  let resultArr = [];
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] !== element) {
+      resultArr.push(array[i]);
+    }
+  }
+  return resultArr;
 }
+
 
 if (require.main === module) {
   console.log('Running sanity checks for removeElement:');
